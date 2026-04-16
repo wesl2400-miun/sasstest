@@ -1,0 +1,24 @@
+@use 'sass:color';
+
+$primary-light: #ffffff;
+$surface-light: color.scale($primary-light, $blackness: 20%);
+$accent-light: #353535;
+$accent-variant-light: #294285;
+$primary-dark: #353535;
+$surface-dark: color.scale($primary-dark, $whiteness: 20%);;
+$accent-dark: #CFCFCF;
+$accent-variant-dark: #FFFF9E;
+
+@mixin theme($mode) {
+  @if $mode == 'light' {
+    --primary: #{$primary-light};
+    --surface: #{$surface-light};
+    --accent: #{$accent-light};
+    --accent-variant: #{$accent-variant-light};
+  } @else {
+    --primary: #{$primary-dark};
+    --surface: #{$surface-dark};
+    --accent: #{$accent-dark};
+    --accent-variant: #{$accent-variant-dark};
+  }
+}

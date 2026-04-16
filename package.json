@@ -1,0 +1,18 @@
+{
+  "name": "sasstest",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sass": "sass ./src/ui/scss:./src/ui/css"
+  },
+  "devDependencies": {
+    "vite": "^8.0.4"
+  },
+  "dependencies": {
+    "sass": "^1.99.0"
+  }
+}

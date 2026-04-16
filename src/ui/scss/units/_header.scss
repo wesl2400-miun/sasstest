@@ -1,0 +1,18 @@
+@use '../base/dimens';
+@use '../base/layout';
+
+header {
+  @include dimens.border-width(100%);
+  @include layout.flex(column, center, center, 'visible');
+  @include dimens.no-margins;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    max-width: 40%;
+    justify-content: start;
+    border-right: 1px solid var(--accent);
+    background-color: var(--primary);
+    height: 100vh;
+  }
+}

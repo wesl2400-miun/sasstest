@@ -1,0 +1,12 @@
+
+@mixin flex($dir, $cont, $items, $hidden) {
+  @if $hidden == 'hidden'{
+    display: none;
+  } @else {
+    display: flex;
+  }
+  justify-content: $cont;
+  align-items: $items;
+  flex-direction: $dir;
+}
+

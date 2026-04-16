@@ -1,0 +1,13 @@
+
+$font-size-header: 22px;
+$max-width: 600px;
+
+@mixin border-width($width) {
+  width: $width;
+  box-sizing: border-box;
+}
+
+@mixin no-margins {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,10 @@
+@use '../base/dimens';
+@use '../base/layout';
+
+.card {
+  @include dimens.border-width(100%);
+  @include layout.flex(column, center, start, 'visible');
+  @include dimens.no-margins;
+  background-color: var(--primary);
+  padding: 0.5rem;
+}
