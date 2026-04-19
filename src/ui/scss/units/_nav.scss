@@ -24,6 +24,7 @@
   cursor: pointer;
 }
 
+// Bocka av grundkravet för Sass ärvning
 #menu-btn {
   @extend .img-btn;
 }
@@ -38,6 +39,7 @@
   @include dimens.no-margins;
 }
 
+// Gäller rutterna i ruttlistan och bockar av grundkravet för nesting
 #routes ul {
   list-style: none;
   @include dimens.border-width(100%);
