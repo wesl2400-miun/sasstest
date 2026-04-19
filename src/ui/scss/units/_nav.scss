@@ -1,21 +1,24 @@
 @use '../base/layout';
 @use '../base/dimens';
+@use '../base/colors';
 
+
+// Stillmallen för navigeringsfältet
 .menu {
   @include dimens.border-width(100%);
-  background-color: var(--primary);
   height: 45px;
   @include layout.flex(row, end, center, 'visible');
   gap: 0.7rem;
   padding-right: 0.5rem;
-  border-bottom: 1px solid var(--accent);
+  @include colors.background('primary', 'light');
+  border-bottom: 1px solid colors.$accent-light;
 }
 
 .img-btn {
   border: none;
   background: none;
   @include dimens.no-margins;
-  color: var(--accent);
+  @include colors.foreground('accent', 'light');
   width: 35px;
   height: 35px;
   cursor: pointer;
@@ -48,29 +51,45 @@
   }
 
   li {
-    border-bottom: 1px solid var(--accent);
     border-radius: 0 0 10px 10px;
-    background-color: var(--primary);
+    border-bottom: 1px solid colors.$accent-light;
+    @include colors.background('primary', 'light');
   }
 
   a, a:link, a:visited {
-    color: var(--accent);
+    @include colors.foreground('accent', 'light');
     text-decoration: none;
     font-size: dimens.$font-size-header;
-     font-weight: 400;
+    font-weight: 400;
 
     &:hover {
-      color: var(--accent-variant);
+      @include colors.foreground('accent-variant', 'light');
     }
   }
 }
 
-@media screen and (min-width: 600px) {
-  #menu-btn {
-    display: none;
+// Nattläget för navigeringsfältet
+@media (prefers-color-scheme: dark) {
+  .menu {
+    @include colors.background('primary', 'dark');
+    border-bottom: 1px solid colors.$accent-dark;
   }
 
-  #routes {
-    display: flex;
+  .img-btn {
+    @include colors.foreground('accent', 'dark');
+  }
+
+  #routes ul {
+    a, a:link, a:visited {
+      @include colors.foreground('accent', 'dark');
+
+      &:hover {
+        @include colors.foreground('accent-variant', 'dark');
+      }
+    }
+    li {
+      border-bottom: 1px solid colors.$accent-dark;
+      @include colors.background('primary', 'dark');
+    }
   }
 }

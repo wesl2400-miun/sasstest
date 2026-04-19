@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <meta name="description" content="Frontend-baserad webbutveckling - Läs mer om Laboration 3">
-    <title>Laboration 3 - Frontend-baserad webbutveckling</title>
+    <meta name="description" content="Frontend-baserad webbutveckling - Titta på bilder på kaffekoppar och kakor.">
+    <title>Bilder - Frontend-baserad webbutveckling</title>
   </head>
   <body class="body">
     <!-- Sidhuvud -->
@@ -37,14 +37,13 @@
     </header>
     <!-- Huvudinnehåll -->
     <main>
-      <h1 id="page-title">Laboration 3</h1>
-      <section class="card">
-        <h2>Om uppgiften</h2>
-        <p>Uppgiften går ut på att skapa en webbplats med hjälp av CSS-preprocessoren Sass. En design ska tas fram för både dags- och nattläge, och publiceringen ska automatiseras.</p>
-        <p>Dags- respektive nattläge ska aktibveras med hjälp av en lämlplig media query. Webbplatsen ska innehålla minst två sidor och minst två bilder. En av sidorna ska heta 'sass' och förklara nack- och fördelar med Sass jämfört med vanlig CSS.</p>
+      <h1 id="page-title">Bilder</h1>
+      <section id="gallery">
+        <!-- Bilder genereras dynamiskt med hjälp av insticksmodulen Vite Image Tools -->
       </section>
     </main>
-    <!-- Skript som genererar navigeringsfältet och logotypen -->
+    <!-- Skript som genererar bilder och navigeringsfältet -->
     <script type="module" src="./src/ui/views/nav-view.js"></script>
+    <script type="module" src="./src/ui/views/gallery-view.js"></script>
   </body>
 </html>

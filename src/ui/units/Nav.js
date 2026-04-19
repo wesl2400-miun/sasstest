@@ -1,12 +1,14 @@
 import openMenu from '../assets/open-menu.svg?raw';
 import closeMenu from '../assets/close-menu.svg?raw';
 
+// Skapar navigeringsfältet
 export class Nav {
   constructor(routes, pTitle) {
     this._routes = routes;
     this._pTitle = pTitle;
   }
 
+  // Tillderar meny-knappen händelsen
   wire = (menuBtn) => {
     this._closed = true;
     this._changeSvg(menuBtn);
@@ -19,6 +21,7 @@ export class Nav {
     });
   }
 
+  // Bifoga svg-bilderna dynamiskt så att de kan ärva färgerna från sitt föräldrarelement
   _changeSvg = (menuBtn) => {
     const svg = this._closed
       ? openMenu : closeMenu;
