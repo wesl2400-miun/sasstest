@@ -35,7 +35,7 @@ jobs:
       # Installerar beroenden från package-lock.json
         run: npm ci
       - name: Build
-      # Bygg projektet med Vite och lägg till '/autodep/' till bas-URL:en
+      # Bygg projektet med Vite och lägg till '/sasstest/' till bas-URL:en
       # Detta är superviktigt - annars hittas inte projektfilerna
         run: npm run build -- --base /sasstest/ 
       - name: Setup Pages
