@@ -123,7 +123,7 @@ header {
     justify-content: start;
     border-right: 1px solid #353535;
     background-color: #ffffff;
-    height: 180vh;
+    height: 300vh;
   }
 }
 @media screen and (min-width: 600px) and (prefers-color-scheme: dark) {
