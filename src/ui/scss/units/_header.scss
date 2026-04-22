@@ -17,7 +17,7 @@ header {
     justify-content: start;
     border-right: 1px solid colors.$accent-light;
     @include colors.background('primary', 'light');
-    height: 180vh;
+    height: 300vh;
   }
 }
 
